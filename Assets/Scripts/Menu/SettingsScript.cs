@@ -17,7 +17,6 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropDownResolution;
     [SerializeField] private TMP_Dropdown dropDownLanguage;
     [SerializeField] private TMP_Dropdown dropDownQuality;
-    //[SerializeField] private MovementButtonsChanger MBC;
     [Header("MasterVolumeSettings")]
     [SerializeField] private TextMeshProUGUI textMasterVolume;
     [SerializeField] private Button buttonIncreaseMaster;
@@ -185,16 +184,7 @@ public class SettingsScript : MonoBehaviour
         bool fullscreen = System.Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
         Screen.fullScreen = fullscreen;
         toggleFullScreen.isOn = fullscreen;
-        //saveData.aspectRatio = dropDownResolution.value;
         dropDownQuality.value = saveData.quality;
-
-      
-
-        ///saveData.difficulty = ???;
-        ///saveData.skipCutScenes = ???;
-        ///saveData.comments = ???;
-        ///saveData.gamepadRumble = ???;
-
     }
 
     private void SetVolume(float savedVolume, string volumeParameter, TextMeshProUGUI volumeText)
@@ -209,8 +199,6 @@ public class SettingsScript : MonoBehaviour
         var value = Mathf.Log10(volumeValue) * parameterVolume - 45;
         return value;
     }
-
-
 
     public void IncreaseValue(ref float currentVolume, string volumeParameter, TextMeshProUGUI text, bool isEasterEgg)
     {

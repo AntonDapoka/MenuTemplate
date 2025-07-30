@@ -52,7 +52,8 @@ public class FadeInAndOutScript : MonoBehaviour
 
         color.a = 1f;
         panelFade.color = color;
-        
+
+
     }
 
     private IEnumerator PlayFadeIn()

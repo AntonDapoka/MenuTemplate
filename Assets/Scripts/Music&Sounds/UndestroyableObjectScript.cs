@@ -9,7 +9,7 @@ public class UndestroyableObjectScript : MonoBehaviour
     {
         UndestroyableObjectScript[] objects = FindObjectsOfType<UndestroyableObjectScript>();
 
-        if (objects.Length > 1)
+        if (objects.Length > 2)
         {
             Destroy(gameObject);
             return;
